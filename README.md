@@ -6,5 +6,8 @@ The goal is for the user to tap on the presented icons, and then have the select
 
 Extra requirements would be: 
 ~~to un-highlight icons by tapping it a second time, and re-highlighting / un-hightlighting per respective tap.~~
-to change the 'Next' button from a passive state to an active state once three icons are highlighted at the same time.
-to prevent the highlighting of more than three icons at a time. 
+to change the 'Next' button from a passive state to an active state once three icons are highlighted at the same time. (unable)
+to prevent the highlighting of more than three icons at a time. (unable)
+
+I updated the colour to be more compliant with AODA standards (AAA).
+I added text descriptions for text readers to identify icons.
