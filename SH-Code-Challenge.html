@@ -1,0 +1,80 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Supports Health Code Challenge</title>
+        <meta name="description" content="Supports Health Code Challenge. Interaction Design for highlighted icons.">
+        <link rel="stylesheet" href="styles/SH-Code-Challenge.css">
+        <link href="http://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <header class="header"><h1 class="header__title">Activity: Grocery</h1>
+            <button class="headerbutton">Path</button></header>
+        
+        <div class="main"> 
+            <div class="progress">
+                <div class="stepsquareactive">1</div>
+                <div class="stepsquare">2</div>
+                <div class="stepsquare">3</div>
+                <div class="stepsquare">4</div>
+                <div class="stepsquare">5</div>
+            </div>
+            <div class="instructions">
+                <p class="instructiontext">Pretend it is Sunday and you are making a grocery list for the items you need for the week. Pick three items.</p>
+            </div>
+            <div class="choices">
+                <img src="icons2/apple.png">
+                <img src="icons2/chicken.png">
+                <img src="icons2/icecream.png">
+                <img src="icons2/pear.png">
+                <img src="icons2/carrot.png">
+                <img src="icons2/cherry.png">
+                <button class="nextbutton">Next</button>
+            </div>
+       
+            <button class="backbutton">Back</button>
+        </div>
+        
+       <script>
+// set image properties, for Highlight effect added when click
+var imgProp = {
+ 
+ 'backgroundColor': '#0037ff',
+ 'borderStyle': 'none'
+};
+         
+           
+// function to highlight IMGs on click - from: https://coursesweb.net/
+function highlightImg() {
+ // gets all <img> tags, and their number
+ var allimgs = document.getElementsByTagName('img');
+ var nrallimgs = allimgs.length;
+
+ // traverses the <img> elements, and register onclick to each one
+ // else, apply the properties defined in $imgProp
+ for(i=0; i<nrallimgs; i++) {
+ allimgs[i].onclick=function() {
+ // if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
+ if(this.style.borderStyle == imgProp.borderStyle) {
+ this.style.background = 'inherit';
+ this.style.border = 'inherit';
+     this.style.borderRadius = 'inherit';
+ }
+ else {
+ this.style.backgroundColor = imgProp.backgroundColor;
+ this.style.borderStyle = imgProp.borderStyle;
+      this.style.borderRadius = imgProp.borderRadius;
+ }
+ }
+ }
+}
+
+// calls the highlightImg() function to apply the effect
+highlightImg();        
+           
+</script>
+        
+    </body>
+</html>
