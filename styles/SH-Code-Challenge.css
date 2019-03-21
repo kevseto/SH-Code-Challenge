@@ -1,1 +1,113 @@
+html,body {
+    margin: 0px;
+    display: flex;
+    font-family: 'Open Sans';
+}
+
+.header {
+    width: 100%;
+    color: #FFF;
+    position: fixed;
+    padding: 35px 20px 20px 20px;
+    display: flex;  
+}
+
+.header__title {
+  font-size: 18px;
+    font-weight: 600;
+  margin: 0px;
+    flex: 1; 
+    color: #0037ff;
+}
+
+.headerbutton {
+    font-size: 14px;
+    margin-right: 40px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    color: #0037ff;
+    border-color: #0037ff;
+    border-width: 2px;
+}
+
+.main {
+    margin-top: 80px;
+    width: 100vw;
+    position: relative;
+}
+
+.progress {
+    color: #FFF;
+    display: block;
+    background: rgba(0,55,255,0.3);
+    text-align: 
+}
+
+.stepsquareactive {
+    display: inline-block;
+    color: #FFF;
+    background: #0037ff;
+    padding: 5px 25px;
+}
+
+.stepsquare {
+    display: none;
+    color: #FFF;
+    background: rgba(0,55,255,0.5);
+    padding: 5px 25px;
+}
+
+.instructions {
+    color: #FFF;
+    background: #e5e5e5;
+    height: auto;
+}
+
+.instructiontext {
+    font-size: 14px;
+    color: #0037ff;
+    line-height: 1.4;
+    padding: 35px 85px 35px 50px;
+    margin: 0px;
+}
+
+.choices {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+img {
+    padding: 10px 20px;
+}
+
+.nextbutton {
+    margin-top: 25px;
+    padding: 15px 75px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #FFF;
+    background: #0037ff;
+    letter-spacing: 1;
+    opacity: .5;
+}
+
+.footer {
+    width: 100%;
+    color: #FFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+     padding: 40px 20px 20px 20px;
+    display: flex;
+}
+
+.backbutton {
+    margin-left: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #0037ff;
+    background: none;
+    border: none;
+    letter-spacing: 1;
+}
 
