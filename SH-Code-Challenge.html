@@ -16,60 +16,63 @@
         <div class="main"> 
             <div class="progress">
                 <div class="stepsquareactive">1</div>
-                <div class="stepsquare">2</div>
-                <div class="stepsquare">3</div>
-                <div class="stepsquare">4</div>
-                <div class="stepsquare">5</div>
             </div>
             <div class="instructions">
-                <p class="instructiontext">Pretend it is Sunday and you are making a grocery list for the items you need for the week. Pick three items.</p>
+                <p class="instructiontext">Pretend it is Sunday and you are making a grocery list for the items you need for the week. <b>Pick three items.</b></p>
             </div>
             <div class="choices">
-                <img src="icons/apple.png">
-                <img src="icons/chicken.png">
-                <img src="icons/icecream.png">
-                <img src="icons/pear.png">
-                <img src="icons/carrot.png">
-                <img src="icons/cherry.png">
+                <div class="identifier"><img src="icons/apple.png"><p>Apple</p></div>
+                <div class="identifier"><img src="icons/chicken.png"><p>Chicken</p></div>
+                <div class="identifier"><img src="icons/icecream.png"><p>Ice Cream</p></div>
+                <div class="identifier"> <img src="icons/pear.png"><p>Pear</p></div>
+                <div class="identifier">  <img src="icons/carrot.png"><p>Carrot</p></div>
+                <div class="identifier"> <img src="icons/cherry.png"><p>Cherry</p></div>
                 <button class="nextbutton">Next</button>
             </div>
        
             <button class="backbutton">Back</button>
         </div>
         
-       <script>
+ <script>
 // set image properties, for Highlight effect added when click
 var imgProp = {
  
- 'backgroundColor': '#0037ff',
- 'borderStyle': 'none'
+ 'backgroundColor': '#4800ff',
+ 'borderStyle': 'none',
+ 'borderRadius':'10px',
+ 'color': '#FFF'
 };
-         
+
            
 // function to highlight IMGs on click - from: https://coursesweb.net/
 function highlightImg() {
  // gets all <img> tags, and their number
- var allimgs = document.getElementsByTagName('img');
- var nrallimgs = allimgs.length;
+var allimgs = document.getElementsByClassName('identifier');
+var nrallimgs = allimgs.length;
 
- // traverses the <img> elements, and register onclick to each one
- // else, apply the properties defined in $imgProp
+// traverses the <img> elements, and register onclick to each one
+// else, apply the properties defined in $imgProp
+    
  for(i=0; i<nrallimgs; i++) {
  allimgs[i].onclick=function() {
- // if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
+// if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
  if(this.style.borderStyle == imgProp.borderStyle) {
- this.style.background = 'inherit';
- this.style.border = 'inherit';
-     this.style.borderRadius = 'inherit';
+     this.style.background = '';
+     this.style.border = '';
+     this.style.borderRadius = '';
+     this.style.color = '';
  }
  else {
- this.style.backgroundColor = imgProp.backgroundColor;
- this.style.borderStyle = imgProp.borderStyle;
-      this.style.borderRadius = imgProp.borderRadius;
+     this.style.backgroundColor = imgProp.backgroundColor;
+     this.style.borderStyle = imgProp.borderStyle;
+     this.style.borderRadius = imgProp.borderRadius;
+     this.style.color = imgProp.color;
+    
  }
  }
  }
 }
+
 
 // calls the highlightImg() function to apply the effect
 highlightImg();        
